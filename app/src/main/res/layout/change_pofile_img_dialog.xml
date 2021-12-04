@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:gravity="center_vertical"
+        android:layout_height="40dp"
+        android:text="Upload Image from device"
+        android:id="@+id/Upload_from_Memory"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:gravity="center_vertical"
+        android:text="Open Camera"
+        android:id="@+id/Upload_from_CAMERA"/>
+
+</LinearLayout>

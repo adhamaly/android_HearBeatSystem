@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Firebase1_Authentication</string>
+
+    // firebase node
+    <string name="User_nodes">User</string>
+    <string name="name">name</string>
+    <string name="phone">phone</string>
+    <string name="profile_image">profile_image</string>
+    <string name="id">user_id</string>
+    <string name="title_activity_reservation">Reservation</string>
+
+
+</resources>
