@@ -15,7 +15,6 @@ import com.example.adham.firebase1_authentication.R;
 import org.pytorch.IValue;
 import org.pytorch.Module;
 import org.pytorch.Tensor;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileOutputStream;
