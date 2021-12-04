@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.adham.firebase1_authentication.R;
 
@@ -48,6 +49,7 @@ public class CheckActivity extends AppCompatActivity {
 
 
 
+
         age = (EditText)findViewById(R.id.age);
         education =(EditText)findViewById(R.id.education);
         cigPerDay = (EditText)findViewById(R.id.cigerates);
@@ -75,6 +77,7 @@ public class CheckActivity extends AppCompatActivity {
                         Float.parseFloat(BPmeds.getText().toString()),Float.parseFloat(prevalentStroke.getText().toString()),Float.parseFloat(PrevalentHyp.getText().toString()),Float.parseFloat(diabtes.getText().toString()));
 
                 predictionText.setText(prediction);
+                Toast.makeText(CheckActivity.this, "checked", Toast.LENGTH_SHORT).show();
             }
         } );
 
