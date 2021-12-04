@@ -29,6 +29,8 @@ public class CheckActivity extends AppCompatActivity {
     TextView predictionText;
     EditText age,education,cigPerDay,tolChol,sysDP,diaBP,BMI,BPM,glucose,gender,currSmoker,BPmeds,prevalentStroke,PrevalentHyp,diabtes;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
