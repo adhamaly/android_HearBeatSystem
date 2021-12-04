@@ -290,14 +290,14 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/prevSmoker"
+            android:id="@+id/PrevalentStroke"
             android:layout_width="72dp"
             android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="prevalent smoker"
+            android:text="Prevalent Stroke"
             android:layout_marginLeft="30dp"
             android:textColor="#000"
             android:textSize="17dp"
@@ -361,6 +361,7 @@
             android:layout_height="wrap_content"
             android:text="Check"
             android:textColor="#fff"
+            android:id="@+id/diseaseCheck"
             android:textSize="30dp"
             android:background="#27BAB0B0"/>
 
@@ -368,7 +369,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#0096FF"
-            android:id="@+id/checkedBPM"
+            android:id="@+id/checkedCHD"
             android:layout_marginLeft="20dp"
             />
 

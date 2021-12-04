@@ -1,15 +1,21 @@
 package com.example.adham.firebase1_authentication.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.adham.firebase1_authentication.R;
 
 import org.pytorch.IValue;
 import org.pytorch.Module;
 import org.pytorch.Tensor;
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,8 +26,10 @@ import java.io.OutputStream;
 public class CheckActivity extends AppCompatActivity {
 
     private static final String TAG = "CheckActivity";
-
     private Module module;
+    TextView predictionText;
+    EditText age,education,cigPerDay,tolChol,sysDP,diaBP,BMI,BPM,glucose,gender,currSmoker,BPmeds,prevalentStroke,PrevalentHyp,diabtes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +43,37 @@ public class CheckActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         Log.e(TAG, getPredictions(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1));
-        Log.e(TAG, String.valueOf("done"));
+        //Log.e(TAG, String.valueOf("done"));
+
+        age = (EditText)findViewById(R.id.age);
+        education =(EditText)findViewById(R.id.education);
+        cigPerDay = (EditText)findViewById(R.id.cigerates);
+        tolChol = (EditText)findViewById(R.id.alcohol);
+        sysDP = (EditText)findViewById(R.id.sysBloodPressure);
+        diaBP = (EditText)findViewById(R.id.DiaBP);
+        BMI = (EditText)findViewById(R.id.BodyMassIndex);
+        BPM = (EditText)findViewById(R.id.BPM);
+        glucose = (EditText)findViewById(R.id.Glucose);
+        gender = (EditText)findViewById(R.id.Gender);
+        currSmoker = (EditText)findViewById(R.id.curentSmoker);
+        BPmeds = (EditText)findViewById(R.id.BloodPressureMedication);
+        prevalentStroke = (EditText)findViewById(R.id.PrevalentStroke);
+        PrevalentHyp = (EditText)findViewById(R.id.prevHyp);
+        diabtes = (EditText)findViewById(R.id.Diabetes);
+
+        predictionText = (TextView) findViewById(R.id.checkedCHD);
+        Button checkButton = findViewById( R.id.diseaseCheck );
+        checkButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String prediction = getPredictions( Float.parseFloat(age.getText().toString()),Float.parseFloat(education.getText().toString()),Float.parseFloat(cigPerDay.getText().toString()),
+                        Float.parseFloat(tolChol.getText().toString()),Float.parseFloat(sysDP.getText().toString()),Float.parseFloat(diaBP.getText().toString()),Float.parseFloat(BMI.getText().toString()),
+                        Float.parseFloat(BPM.getText().toString()),Float.parseFloat(glucose.getText().toString()),Float.parseFloat(gender.getText().toString()),Float.parseFloat(currSmoker.getText().toString()),
+                        Float.parseFloat(BPmeds.getText().toString()),Float.parseFloat(prevalentStroke.getText().toString()),Float.parseFloat(PrevalentHyp.getText().toString()),Float.parseFloat(diabtes.getText().toString()));
+
+                predictionText.setText(prediction);
+            }
+        } );
 
     }
 
