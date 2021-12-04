@@ -44,7 +44,9 @@ public class CheckActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         Log.e(TAG, getPredictions(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1));
-        //Log.e(TAG, String.valueOf("done"));
+        Log.e(TAG, String.valueOf("done"));
+
+
 
         age = (EditText)findViewById(R.id.age);
         education =(EditText)findViewById(R.id.education);
